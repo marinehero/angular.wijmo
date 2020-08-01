@@ -15,10 +15,15 @@ import { AppComponent } from './app.component';
 
 import { ConsoleLoggerService } from './services/log4ts/console-logger.service';
 import { LoggerService } from './services/log4ts/logger.service';
+
 import { GroupingComponent } from './grouping/grouping.component';
 import { GroupingModule } from './grouping/grouping.module';
+
 import { GroupComponent } from './group/group.component';
 import { GroupModule } from './group/group.module';
+
+import { PlanningComponent } from './planning/planning.component';
+import { PlanningModule } from './planning/planning.module';
 
 const routes: Routes = [
   // Basic routes
@@ -26,6 +31,7 @@ const routes: Routes = [
   { path: 'home', component: LayoutComponent },
   { path: 'group', component: GroupComponent },
   { path: 'grouping', component: GroupingComponent },
+  { path: 'planning', component: PlanningComponent },
   { path: 'palette', component: PaletteComponent }
 ];
 
@@ -40,6 +46,8 @@ const routes: Routes = [
     PaletteModule,
     GroupingModule,
     GroupModule,
+    PlanningModule,
+    PlanningModule,
     RouterModule.forRoot(routes)
   ],
   providers: [ { provide: LoggerService, useClass: ConsoleLoggerService } ],

@@ -49,7 +49,7 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0-next.2
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Documentation
 
