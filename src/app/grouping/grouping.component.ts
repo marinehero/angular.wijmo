@@ -42,6 +42,23 @@ export class GroupingComponent implements AfterViewInit {
         }
     }
 
+    animate(grid: wjcGrid.FlexGrid) {
+      wjcCore.animate((pct: number) => {
+          //
+          // calculate transform for given percent (zero to one)
+          let xform = '';
+          if (pct < 1) {
+              if (pct > 0.5) {
+                pct = pct - 1;
+              }
+              xform = 'rotateY( ' + (pct * 180) + 'deg)';
+          }
+          //
+          // apply the transform to the grid element
+          grid.hostElement.style.transform = xform;
+      }, 2000); // animate for two seconds
+   }
+
     ngAfterViewInit() {
 
       this.flexGrid.isReadOnly = true;
