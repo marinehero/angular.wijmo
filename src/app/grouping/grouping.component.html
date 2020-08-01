@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <wj-flex-grid #flexGrid
+      [itemsSource]="workers"
+      [autoGenerateColumns]=false
+      [headersVisibility]="'Column'"
+      [selectionMode]="'Row'"
+      [childItemsPath]="['checks','earnings']"
+      (loadedRows)="onLoadedRows(flexGrid,$event)"
+      (beginningEdit)="onBeginningEdit(flexGrid, $event)"
+  >
+
+    <wj-flex-grid-column [binding]="'name'" [isReadOnly]=false></wj-flex-grid-column>
+    <wj-flex-grid-column [binding]="'hours'" [isReadOnly]=false [dataType]="'Number'" [format]="'n2'"></wj-flex-grid-column>
+    <wj-flex-grid-column [binding]="'rate'" [dataType]="'Number'" [format]="'n2'"></wj-flex-grid-column>
+    <wj-flex-grid-column [binding]="'uif'" [dataType]="'Number'" [format]="'n2'"></wj-flex-grid-column>
+    <wj-flex-grid-column [binding]="'paye'" [dataType]="'Number'" [format]="'n2'"></wj-flex-grid-column>
+  </wj-flex-grid>
+</div>

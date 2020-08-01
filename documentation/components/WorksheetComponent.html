@@ -1,0 +1,1342 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>angular.wijmo documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/vagrant.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">angular.wijmo documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>WorksheetComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/worksheet/worksheet.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-worksheet</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./worksheet.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./worksheet.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_updatingSelection">_updatingSelection</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#data">data</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#flexSheet">flexSheet</a>
+                            </li>
+                            <li>
+                                <a href="#selection">selection</a>
+                            </li>
+                            <li>
+                                <a href="#selectionFormatState">selectionFormatState</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_buildDataMap">_buildDataMap</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_initDataMapForBindingSheet">_initDataMapForBindingSheet</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_updateSelection">_updateSelection</a>
+                            </li>
+                            <li>
+                                <a href="#applyBoldStyle">applyBoldStyle</a>
+                            </li>
+                            <li>
+                                <a href="#applyItalicStyle">applyItalicStyle</a>
+                            </li>
+                            <li>
+                                <a href="#applyUnderlineStyle">applyUnderlineStyle</a>
+                            </li>
+                            <li>
+                                <a href="#drawChart">drawChart</a>
+                            </li>
+                            <li>
+                                <a href="#fileLoad">fileLoad</a>
+                            </li>
+                            <li>
+                                <a href="#fileNew">fileNew</a>
+                            </li>
+                            <li>
+                                <a href="#fileSave">fileSave</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterViewInit">ngAfterViewInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(worksheetService: <a href="../injectables/WorksheetService.html">WorksheetService</a>, countryService: <a href="../injectables/CountryService.html">CountryService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/worksheet/worksheet.component.ts:40</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>worksheetService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/WorksheetService.html" target="_self" >WorksheetService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>countryService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CountryService.html" target="_self" >CountryService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_buildDataMap"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            _buildDataMap
+                        </b>
+                        <a href="#_buildDataMap"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_buildDataMap(items)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="186"
+                            class="link-to-prism">src/app/worksheet/worksheet.component.ts:186</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>items</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_initDataMapForBindingSheet"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            _initDataMapForBindingSheet
+                        </b>
+                        <a href="#_initDataMapForBindingSheet"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_initDataMapForBindingSheet(flexSheet)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="115"
+                            class="link-to-prism">src/app/worksheet/worksheet.component.ts:115</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>flexSheet</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_updateSelection"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            _updateSelection
+                        </b>
+                        <a href="#_updateSelection"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_updateSelection(sel)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="130"
+                            class="link-to-prism">src/app/worksheet/worksheet.component.ts:130</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>sel</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="applyBoldStyle"></a>
+                    <span class="name">
+                        <b>
+                            applyBoldStyle
+                        </b>
+                        <a href="#applyBoldStyle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>applyBoldStyle()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="87"
+                            class="link-to-prism">src/app/worksheet/worksheet.component.ts:87</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="applyItalicStyle"></a>
+                    <span class="name">
+                        <b>
+                            applyItalicStyle
+                        </b>
+                        <a href="#applyItalicStyle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>applyItalicStyle()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="96"
+                            class="link-to-prism">src/app/worksheet/worksheet.component.ts:96</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="applyUnderlineStyle"></a>
+                    <span class="name">
+                        <b>
+                            applyUnderlineStyle
+                        </b>
+                        <a href="#applyUnderlineStyle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>applyUnderlineStyle()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="105"
+                            class="link-to-prism">src/app/worksheet/worksheet.component.ts:105</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="drawChart"></a>
+                    <span class="name">
+                        <b>
+                            drawChart
+                        </b>
+                        <a href="#drawChart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>drawChart()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="213"
+                            class="link-to-prism">src/app/worksheet/worksheet.component.ts:213</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fileLoad"></a>
+                    <span class="name">
+                        <b>
+                            fileLoad
+                        </b>
+                        <a href="#fileLoad"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>fileLoad(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="194"
+                            class="link-to-prism">src/app/worksheet/worksheet.component.ts:194</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fileNew"></a>
+                    <span class="name">
+                        <b>
+                            fileNew
+                        </b>
+                        <a href="#fileNew"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>fileNew()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="207"
+                            class="link-to-prism">src/app/worksheet/worksheet.component.ts:207</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fileSave"></a>
+                    <span class="name">
+                        <b>
+                            fileSave
+                        </b>
+                        <a href="#fileSave"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>fileSave()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="201"
+                            class="link-to-prism">src/app/worksheet/worksheet.component.ts:201</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <b>
+                            ngAfterViewInit
+                        </b>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/app/worksheet/worksheet.component.ts:47</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_updatingSelection"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _updatingSelection</b>
+                            <a href="#_updatingSelection"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/worksheet/worksheet.component.ts:40</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="data"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            data</b>
+                            <a href="#data"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>any[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/worksheet/worksheet.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="flexSheet"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            flexSheet</b>
+                            <a href="#flexSheet"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>wjcGridSheet.FlexSheet</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(&#x27;flexSheet&#x27;)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/worksheet/worksheet.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selection"></a>
+                        <span class="name">
+                            <b>
+                            selection</b>
+                            <a href="#selection"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    content: &#x27;&#x27;,
+    position: &#x27;&#x27;,
+    fontFamily: &#x27;Arial, Helvetica, sans-serif&#x27;,
+    fontSize: &#x27;8px&#x27;
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/worksheet/worksheet.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectionFormatState"></a>
+                        <span class="name">
+                            <b>
+                            selectionFormatState</b>
+                            <a href="#selectionFormatState"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>wjcGridSheet.IFormatState</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/worksheet/worksheet.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import * as wjcGridSheet from &#x27;@grapecity/wijmo.grid.sheet&#x27;;
+import * as wjcGrid from &#x27;@grapecity/wijmo.grid&#x27;;
+
+import { AfterViewInit, Component, ViewChild } from &#x27;@angular/core&#x27;;
+
+import { WorksheetService } from &#x27;../services/worksheet.service&#x27;;
+import { CountryService } from &#x27;../services/country.service&#x27;;
+
+@Component({
+  selector: &#x27;app-worksheet&#x27;,
+  templateUrl: &#x27;./worksheet.component.html&#x27;,
+  styleUrls: [&#x27;./worksheet.component.css&#x27;]
+})
+
+export class WorksheetComponent implements AfterViewInit {
+
+  @ViewChild(&#x27;flexSheet&#x27;)
+  private flexSheet: wjcGridSheet.FlexSheet;
+
+  private data: any[];
+  // undoStack: wjcGridSheet.UndoStack;
+  selectionFormatState: wjcGridSheet.IFormatState &#x3D; {};
+
+  selection: any &#x3D; {
+    content: &#x27;&#x27;,
+    position: &#x27;&#x27;,
+    fontFamily: &#x27;Arial, Helvetica, sans-serif&#x27;,
+    fontSize: &#x27;8px&#x27;
+  };
+  private _updatingSelection &#x3D; false;
+
+  constructor(private worksheetService: WorksheetService,
+              private countryService: CountryService) {
+    this.data &#x3D; this.countryService.getData(49);
+  }
+
+  ngAfterViewInit() {
+
+    const self &#x3D; this;
+
+    this.flexSheet.deferUpdate(() &#x3D;&gt; {
+      this.flexSheet.selectedSheetIndex &#x3D; 0;
+      // this.flexSheet.selectedSheet.itemsSource &#x3D; this.data;
+      // this._initDataMapForBindingSheet(this.flexSheet);
+    });
+
+    this.flexSheet.selectionChanged.addHandler((sender: any, args: wjcGrid.CellRangeEventArgs) &#x3D;&gt; {
+      self._updateSelection(args.range);
+      self.selectionFormatState &#x3D; self.flexSheet.getSelectionFormatState();
+      self.worksheetService.setState(self.selectionFormatState);
+    });
+  }
+
+  /*
+
+  flexSheetInit(flexSheet: wjcGridSheet.FlexSheet) {
+    const self &#x3D; this;
+
+    if (flexSheet) {
+      flexSheet.deferUpdate(() &#x3D;&gt; {
+        flexSheet.selectedSheetIndex &#x3D; 0;
+        flexSheet.selectedSheet.itemsSource &#x3D; this.data;
+        this._initDataMapForBindingSheet(flexSheet);
+      });
+
+      flexSheet.selectionChanged.addHandler((sender: any, args: wjcGrid.CellRangeEventArgs) &#x3D;&gt; {
+        self._updateSelection(args.range);
+        self.selectionFormatState &#x3D; flexSheet.getSelectionFormatState();
+
+        this.worksheetService.setState(self.selectionFormatState);
+      });
+    }
+  }
+
+  */
+
+  applyBoldStyle() {
+    if (this.flexSheet) {
+      this.flexSheet.applyCellsStyle({ fontWeight: this.selectionFormatState.isBold ? &#x27;none&#x27; : &#x27;bold&#x27; });
+      this.selectionFormatState.isBold &#x3D; !this.selectionFormatState.isBold;
+
+      this.worksheetService.setState(this.selectionFormatState);
+    }
+  }
+
+  applyItalicStyle() {
+    if (this.flexSheet) {
+      this.flexSheet.applyCellsStyle({ fontStyle: this.selectionFormatState.isItalic ? &#x27;none&#x27; : &#x27;italic&#x27; });
+      this.selectionFormatState.isItalic &#x3D; !this.selectionFormatState.isItalic;
+
+      this.worksheetService.setState(this.selectionFormatState);
+    }
+  }
+
+  applyUnderlineStyle() {
+    if (this.flexSheet) {
+      this.flexSheet.applyCellsStyle({ textDecoration: this.selectionFormatState.isUnderline ? &#x27;none&#x27; : &#x27;underline&#x27; });
+      this.selectionFormatState.isUnderline &#x3D; !this.selectionFormatState.isUnderline;
+
+      this.worksheetService.setState(this.selectionFormatState);
+    }
+  }
+
+  // Initialise the dataMap for the bound sheet.
+  private _initDataMapForBindingSheet(flexSheet) {
+    let column;
+
+    if (flexSheet) {
+      column &#x3D; flexSheet.columns.getColumn(&#x27;countryId&#x27;);
+      if (column &amp;&amp; !column.dataMap) {
+        column.dataMap &#x3D; this._buildDataMap(this.countryService.countries);
+      }
+      column &#x3D; flexSheet.columns.getColumn(&#x27;productId&#x27;);
+      if (column &amp;&amp; !column.dataMap) {
+        column.dataMap &#x3D; this._buildDataMap(this.countryService.products);
+      }
+    }
+  }
+
+  private _updateSelection(sel) {
+    const flexSheet &#x3D; this.flexSheet,
+          row &#x3D; flexSheet.rows[sel.row],
+          rowCnt &#x3D; flexSheet.rows.length,
+          colCnt &#x3D; flexSheet.columns.length;
+    let r,
+        c,
+        cellStyle,
+        cellRange,
+        rangeSum,
+        rangeAvg,
+        rangeCnt;
+
+    this._updatingSelection &#x3D; true;
+
+    if (sel.row &gt; -1 &amp;&amp; sel.col &gt; -1 &amp;&amp; rowCnt &gt; 0 &amp;&amp; colCnt &gt; 0
+      &amp;&amp; sel.col &lt; colCnt &amp;&amp; sel.col2 &lt; colCnt
+      &amp;&amp; sel.row &lt; rowCnt &amp;&amp; sel.row2 &lt; rowCnt) {
+      r &#x3D; sel.row &gt;&#x3D; rowCnt ? rowCnt - 1 : sel.row;
+      c &#x3D; sel.col &gt;&#x3D; colCnt ? colCnt - 1 : sel.col;
+      this.selection.content &#x3D; flexSheet.getCellData(r, c, true);
+      this.selection.position &#x3D; wjcGridSheet.FlexSheet.convertNumberToAlpha(sel.col) + (sel.row + 1);
+      cellStyle &#x3D; flexSheet.selectedSheet.getCellStyle(sel.row, sel.col);
+
+      /*
+      if (cellStyle) {
+        this.cboFontName.selectedIndex &#x3D; this._checkFontfamily(cellStyle.fontFamily);
+        this.cboFontSize.selectedIndex &#x3D; this._checkFontSize(cellStyle.fontSize);
+
+      } else {
+        this.cboFontName.selectedIndex &#x3D; 0;
+        this.cboFontSize.selectedIndex &#x3D; 5;
+      }
+      */
+
+      if (sel.col !&#x3D;&#x3D; -1 &amp;&amp; sel.col2 !&#x3D;&#x3D; -1 &amp;&amp; sel.row !&#x3D;&#x3D; -1 &amp;&amp; sel.row2 !&#x3D;&#x3D; -1) {
+        cellRange &#x3D; wjcGridSheet.FlexSheet.convertNumberToAlpha(sel.leftCol) + (sel.topRow + 1) + &#x27;:&#x27; +
+                    wjcGridSheet.FlexSheet.convertNumberToAlpha(sel.rightCol) + (sel.bottomRow + 1);
+        rangeSum &#x3D; flexSheet.evaluate(&#x27;sum(&#x27; + cellRange + &#x27;)&#x27;);
+        rangeAvg &#x3D; flexSheet.evaluate(&#x27;average(&#x27; + cellRange + &#x27;)&#x27;);
+        rangeCnt &#x3D; flexSheet.evaluate(&#x27;count(&#x27; + cellRange + &#x27;)&#x27;);
+
+        // $(&#x27;.status&#x27;).text(cellRange + &#x27; Average: &#x27; + rangeAvg + &#x27; Count: &#x27; + rangeCnt + &#x27; Sum: &#x27; + rangeSum);
+      } else {
+        // $(&#x27;.status&#x27;).text(&#x27;&#x27;);
+      }
+    } else {
+      this.selection.content &#x3D; &#x27;&#x27;;
+      this.selection.position &#x3D; &#x27;&#x27;;
+      // $(&#x27;.status&#x27;).text(&#x27;&#x27;);
+    }
+
+    this._updatingSelection &#x3D; false;
+  }
+
+  // build a data map from a string array using the indices as keys
+  private _buildDataMap(items) {
+    const map &#x3D; [];
+    for (let i &#x3D; 0; i &lt; items.length; i++) {
+      map.push({ key: i, value: items[i] });
+    }
+    return new wjcGrid.DataMap(map, &#x27;key&#x27;, &#x27;value&#x27;);
+  }
+
+  fileLoad(event: any) {
+    if (this.flexSheet &amp;&amp; event.target.files[0]) {
+      this.flexSheet.loadAsync(event.target.files[0]);
+      event.target.value &#x3D; &#x27;&#x27;;
+    }
+  }
+
+  fileSave() {
+    if (this.flexSheet) {
+      this.flexSheet.saveAsync(&#x27;flexsheet-1.xlsx&#x27;);
+    }
+  }
+
+  fileNew() {
+    if (this.flexSheet) {
+      this.flexSheet.clear();
+    }
+  }
+
+  drawChart() {
+    if (this.flexSheet) {
+      this.flexSheet.selectAll();
+    }
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;wj-flex-sheet #flexSheet&gt;
+  &lt;wj-sheet name&#x3D;&quot;Profit &amp; Loss&quot;&gt;&lt;/wj-sheet&gt;
+&lt;/wj-flex-sheet&gt;
+
+&lt;!--
+
+&lt;wj-flex-sheet #flexSheet (initialized)&#x3D;&quot;flexSheetInit(flexSheet)&quot;&gt;
+  &lt;wj-sheet name&#x3D;&quot;Country&quot;&gt;&lt;/wj-sheet&gt;
+  &lt;wj-sheet name&#x3D;&quot;Report&quot;&gt;&lt;/wj-sheet&gt;
+  &lt;wj-sheet name&#x3D;&quot;Formulas&quot;&gt;&lt;/wj-sheet&gt;
+&lt;/wj-flex-sheet&gt;
+
+--&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./worksheet.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">/*
+
+See: styles.css
+
+.wj-new-sheet {
+  display:none !important;
+}
+
+*/
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><wj-flex-sheet #flexSheet>  <wj-sheet name="Profit & Loss"></wj-sheet></wj-flex-sheet><!--<wj-flex-sheet #flexSheet (initialized)="flexSheetInit(flexSheet)">  <wj-sheet name="Country"></wj-sheet>  <wj-sheet name="Report"></wj-sheet>  <wj-sheet name="Formulas"></wj-sheet></wj-flex-sheet>--></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'GroupingComponent', 'selector': 'app-grouping'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'PaletteComponent', 'selector': 'app-palette'},{'name': 'PaletteComponent', 'selector': 'app-palette'},{'name': 'RibbonComponent', 'selector': 'app-ribbon'},{'name': 'WorksheetComponent', 'selector': 'app-worksheet'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'WorksheetComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'WorksheetComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

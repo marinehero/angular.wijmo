@@ -1,0 +1,100 @@
+/* Font Awesome 4.7.0 CSS */
+@import './app/styles/vendor/font-awesome/4.7.0/css/font-awesome.min.css';
+
+/* Bootstrap 3.3.7 CSS */
+@import './app/styles/vendor/bootstrap/3.3.7/css/bootstrap.min.css';
+
+/* Wijmo 5 CSS */
+/*
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.office.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.coral.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.cerulean.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.cleanlight.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.cleandark.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.cocoa.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.cyborg.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.dark.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.darkly.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.flatly.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.grayscale.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.highcontrast.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.light.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.material.amber-indigo.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.material.indigo-orange.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.material.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.material.vars.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.midnight.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.minimal.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.modern.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.organic.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.paper.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.simplex.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.slate.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.superhero.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.zen.min.css';
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.trust.min.css';
+*/
+@import './app/styles/vendor/wijmo/5.20172.334/css/wijmo.theme.coral.min.css';
+
+/*
+*/
+
+/*
+ Styles and resources from the wijmo-5-enterprise ExcelBook sample
+
+ See:
+ - /wijmo-5-enterprise/Samples/TS/Angular2/ExcelBook/ExcelBook/styles
+ - /wijmo-5-enterprise/Samples/TS/Angular/ExcelBook/ExcelBook/resources
+*/
+
+/* ExcelBook CSS */
+@import './app/styles/app.css';
+@import './app/styles/ribbon.css';
+@import './app/styles/cellStyles.css';
+
+/*
+See: flex-sheet/palette.component.css
+*/
+.wj-new-sheet {
+  display:none !important;
+}
+
+.wj-state-selected {
+  background-color: #0085c7;
+  color: #fff;
+}
+
+.wj-flexsheet .wj-state-multi-selected {
+  background-color: #0085c7;
+  color: #fff;
+}
+
+.wj-flexsheet .wj-cell.wj-state-multi-selected {
+  border-right: none;
+  border-bottom: none;
+}
+
+
+/*
+See: grouping.component.css
+*/
+.wj-cell.wj-group:not(.wj-state-selected):not(.wj-state-multi-selected) {
+  background-color: rgb(232, 248, 239);
+}
+/*
+.wj-flexgrid {
+  max-height: 680px;
+  width: 680px;
+  margin: 20px;
+}
+.wj-cell.wj-group {
+  border: none;
+}
+.wj-cell.wj-group:not(.wj-state-selected):not(.wj-state-multi-selected) {
+  background-color: rgb(232, 248, 239);
+}
+body {
+   margin-bottom: 48px;
+}
+*/
