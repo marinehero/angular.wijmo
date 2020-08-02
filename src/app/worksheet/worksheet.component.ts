@@ -16,6 +16,7 @@ import { AfterViewInit, Component, ViewChild } from '@angular/core';
 
 import { WorksheetService } from '../services/worksheet.service';
 import { CountryService } from '../services/country.service';
+import { ConsoleLoggerService } from '../services/log4ts/console-logger.service';
 
 @Component({
   selector: 'app-worksheet',
@@ -65,7 +66,7 @@ export class WorksheetComponent implements AfterViewInit {
       // this._initDataMapForBindingSheet(this.flexSheet);
     });
 
-    this.flexSheet.selectionChanged.addHandler((sender: any, args: wjcGrid.CellRangeEventArgs) => {
+    this.flexSheet.selectionChanged.addHandler((sender: wjcGridSheet.FlexSheet, args: wjcGrid.CellRangeEventArgs) => {
       self._updateSelection(args.range);
       self.selectionFormatState = self.flexSheet.getSelectionFormatState();
       self.worksheetService.setState(self.selectionFormatState);
@@ -233,7 +234,8 @@ export class WorksheetComponent implements AfterViewInit {
 
   drawChart() {
     if (this.flexSheet) {
-      this.flexSheet.selectAll();
+      // this.flexSheet.selectAll();
+      this.flexSheet.cells.columns[0].cellTemplate = this.tplRealLink;
     }
   }
 
