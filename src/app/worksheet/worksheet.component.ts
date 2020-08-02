@@ -53,7 +53,7 @@ export class WorksheetComponent implements AfterViewInit {
 
   constructor(private worksheetService: WorksheetService,
               private countryService: CountryService) {
-    this.data = this.countryService.getData(49);
+    this.data = this.countryService.getData(200);
   }
 
   ngAfterViewInit() {
@@ -62,12 +62,12 @@ export class WorksheetComponent implements AfterViewInit {
 
     this.flexSheet.deferUpdate(() => {
       this.flexSheet.selectedSheetIndex = 0;
-      // this.flexSheet.selectedSheet.itemsSource = this.data;
-      // this._initDataMapForBindingSheet(this.flexSheet);
+      this.flexSheet.selectedSheet.itemsSource = this.data;
+      this._initDataMapForBindingSheet(this.flexSheet);
     });
 
     this.flexSheet.selectionChanged.addHandler((sender: wjcGridSheet.FlexSheet, args: wjcGrid.CellRangeEventArgs) => {
-      self._updateSelection(args.range);
+      self._updateSelection(sender, args);
       self.selectionFormatState = self.flexSheet.getSelectionFormatState();
       self.worksheetService.setState(self.selectionFormatState);
     });
@@ -85,8 +85,8 @@ export class WorksheetComponent implements AfterViewInit {
         this._initDataMapForBindingSheet(flexSheet);
       });
 
-      flexSheet.selectionChanged.addHandler((sender: any, args: wjcGrid.CellRangeEventArgs) => {
-        self._updateSelection(args.range);
+      flexSheet.selectionChanged.addHandler((sender: wjcGridSheet.FlexSheet, args: wjcGrid.CellRangeEventArgs) => {
+        self._updateSelection(sender,args);
         self.selectionFormatState = flexSheet.getSelectionFormatState();
 
         this.worksheetService.setState(self.selectionFormatState);
@@ -134,11 +134,10 @@ export class WorksheetComponent implements AfterViewInit {
   }
 
   // Initialise the dataMap for the bound sheet.
-  private _initDataMapForBindingSheet(flexSheet) {
-    let column;
+  private _initDataMapForBindingSheet(flexSheet: wjcGridSheet.FlexSheet) {
 
     if (flexSheet) {
-      column = flexSheet.columns.getColumn('countryId');
+      let column = flexSheet.columns.getColumn('countryId');
       if (column && !column.dataMap) {
         column.dataMap = this._buildDataMap(this.countryService.countries);
       }
@@ -149,7 +148,11 @@ export class WorksheetComponent implements AfterViewInit {
     }
   }
 
-  private _updateSelection(sel) {
+  private _updateSelection(sender: wjcGridSheet.FlexSheet, selArgs: wjcGrid.CellRangeEventArgs) {
+    if (sender === null) {
+      console.log('mising sender');
+    }
+    const sel = selArgs.range;
     const flexSheet = this.flexSheet,
           row = flexSheet.rows[sel.row],
           rowCnt = flexSheet.rows.length,
@@ -173,6 +176,7 @@ export class WorksheetComponent implements AfterViewInit {
       this.selection.position = wjcGridSheet.FlexSheet.convertNumberToAlpha(sel.col) + (sel.row + 1);
       cellStyle = flexSheet.selectedSheet.getCellStyle(sel.row, sel.col);
 
+      if (this._updatingSelection) { }
       /*
       if (cellStyle) {
         this.cboFontName.selectedIndex = this._checkFontfamily(cellStyle.fontFamily);

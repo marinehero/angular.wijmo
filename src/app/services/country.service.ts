@@ -16,9 +16,9 @@ export class CountryService {
 
   // get matches for a search term
   getData(count: number): any[] {
-    let data = [],
-      countryId,
-      productId;
+    const data = [];
+    let countryId: number;
+    let productId: number;
 
     for (let i = 0; i < count; i++) {
       countryId = Math.floor(Math.random() * this._countries.length);
@@ -27,9 +27,11 @@ export class CountryService {
         id: i,
         countryId: countryId,
         productId: productId,
-        date: new Date(2014, i % 12, i % 28),
+        date: new Date(2020, i % 12, i % 28),
         amount: Math.random() * 10000,
-        active: i % 4 === 0
+        active: i % 4 === 0,
+        'Col A': i,
+        'Col B': i
       });
     }
     return data;
