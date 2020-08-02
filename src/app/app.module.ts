@@ -24,6 +24,8 @@ import { GroupModule } from './group/group.module';
 
 import { PlanningComponent } from './planning/planning.component';
 import { PlanningModule } from './planning/planning.module';
+import { PivotpanelComponent } from './pivotpanel/pivotpanel.component';
+import { PivotpanelModule } from './pivotpanel/pivotpanel.module';
 
 const routes: Routes = [
   // Basic routes
@@ -32,7 +34,8 @@ const routes: Routes = [
   { path: 'group', component: GroupComponent },
   { path: 'grouping', component: GroupingComponent },
   { path: 'planning', component: PlanningComponent },
-  { path: 'palette', component: PaletteComponent }
+  { path: 'palette', component: PaletteComponent },
+  { path: 'pivot', component: PivotpanelComponent }
 ];
 
 @NgModule({
@@ -47,7 +50,7 @@ const routes: Routes = [
     GroupingModule,
     GroupModule,
     PlanningModule,
-    PlanningModule,
+    PivotpanelModule,
     RouterModule.forRoot(routes)
   ],
   providers: [ { provide: LoggerService, useClass: ConsoleLoggerService } ],

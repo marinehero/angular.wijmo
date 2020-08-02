@@ -10,6 +10,7 @@
 
 import * as wjcGridSheet from '@grapecity/wijmo.grid.sheet';
 import * as wjcGrid from '@grapecity/wijmo.grid';
+import { CellMaker } from '@grapecity/wijmo.grid.cellmaker';
 
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 
@@ -38,6 +39,16 @@ export class WorksheetComponent implements AfterViewInit {
     fontSize: '8px'
   };
   private _updatingSelection = false;
+
+  tplRealLink = CellMaker.makeLink({
+    text: 'Goto <b>Pivot</b>',
+    href: 'pivot'
+/*    attributes: {
+        target: '_blank',
+        rel: 'noopener noreferrer',
+        tabIndex: -1
+    }*/
+  });
 
   constructor(private worksheetService: WorksheetService,
               private countryService: CountryService) {
@@ -103,6 +114,16 @@ export class WorksheetComponent implements AfterViewInit {
   }
 
   applyUnderlineStyle() {
+    if (this.flexSheet) {
+      this.flexSheet.applyCellsStyle({ textDecoration: this.selectionFormatState.isUnderline ? 'none' : 'underline' });
+      this.selectionFormatState.isUnderline = !this.selectionFormatState.isUnderline;
+
+      this.worksheetService.setState(this.selectionFormatState);
+    }
+  }
+
+  // Want to set attribute [cellTemplate] = 'tplRealLink' defined above
+  applyCellTemplate() {
     if (this.flexSheet) {
       this.flexSheet.applyCellsStyle({ textDecoration: this.selectionFormatState.isUnderline ? 'none' : 'underline' });
       this.selectionFormatState.isUnderline = !this.selectionFormatState.isUnderline;

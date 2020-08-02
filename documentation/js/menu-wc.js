@@ -55,13 +55,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-AppModule-96bd504ca613fbaa5872fce7400ed1e4"' : 'data-target="#xs-components-links-module-AppModule-96bd504ca613fbaa5872fce7400ed1e4"' }>
+                                            'data-target="#components-links-module-AppModule-a0e0c6a604362086b5b8b93b5342cec6"' : 'data-target="#xs-components-links-module-AppModule-a0e0c6a604362086b5b8b93b5342cec6"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-96bd504ca613fbaa5872fce7400ed1e4"' :
-                                            'id="xs-components-links-module-AppModule-96bd504ca613fbaa5872fce7400ed1e4"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-a0e0c6a604362086b5b8b93b5342cec6"' :
+                                            'id="xs-components-links-module-AppModule-a0e0c6a604362086b5b8b93b5342cec6"' }>
                                             <li class="link">
                                                 <a href="components/AppComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppComponent</a>
@@ -185,6 +185,24 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                             <li class="link">
                                                 <a href="components/PaletteComponent-1.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">PaletteComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/PivotpanelModule.html" data-type="entity-link">PivotpanelModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-PivotpanelModule-e9d7745d165984047c715cf234a99c74"' : 'data-target="#xs-components-links-module-PivotpanelModule-e9d7745d165984047c715cf234a99c74"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-PivotpanelModule-e9d7745d165984047c715cf234a99c74"' :
+                                            'id="xs-components-links-module-PivotpanelModule-e9d7745d165984047c715cf234a99c74"' }>
+                                            <li class="link">
+                                                <a href="components/PivotpanelComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">PivotpanelComponent</a>
                                             </li>
                                         </ul>
                                     </li>

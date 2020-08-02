@@ -157,6 +157,9 @@
                                 <a href="#_getSchemeValues">_getSchemeValues</a>
                             </li>
                             <li>
+                                <a href="#animate">animate</a>
+                            </li>
+                            <li>
                                 <a href="#ngAfterViewInit">ngAfterViewInit</a>
                             </li>
                             <li>
@@ -263,8 +266,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="81"
-                            class="link-to-prism">src/app/grouping/grouping.component.ts:81</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="98"
+                            class="link-to-prism">src/app/grouping/grouping.component.ts:98</a></div>
                 </td>
             </tr>
 
@@ -315,6 +318,76 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="animate"></a>
+                    <span class="name">
+                        <b>
+                            animate
+                        </b>
+                        <a href="#animate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>animate(grid: wjcGrid.FlexGrid)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">src/app/grouping/grouping.component.ts:45</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>grid</td>
+                                    <td>
+                                            <code>wjcGrid.FlexGrid</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="ngAfterViewInit"></a>
                     <span class="name">
                         <b>
@@ -333,8 +406,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="45"
-                            class="link-to-prism">src/app/grouping/grouping.component.ts:45</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">src/app/grouping/grouping.component.ts:62</a></div>
                 </td>
             </tr>
 
@@ -538,8 +611,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="76"
-                            class="link-to-prism">src/app/grouping/grouping.component.ts:76</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="93"
+                            class="link-to-prism">src/app/grouping/grouping.component.ts:93</a></div>
                 </td>
             </tr>
 
@@ -745,6 +818,23 @@ export class GroupingComponent implements AfterViewInit {
         }
     }
 
+    animate(grid: wjcGrid.FlexGrid) {
+      wjcCore.animate((pct: number) &#x3D;&gt; {
+          //
+          // calculate transform for given percent (zero to one)
+          let xform &#x3D; &#x27;&#x27;;
+          if (pct &lt; 1) {
+              if (pct &gt; 0.5) {
+                pct &#x3D; pct - 1;
+              }
+              xform &#x3D; &#x27;rotateY( &#x27; + (pct * 180) + &#x27;deg)&#x27;;
+          }
+          //
+          // apply the transform to the grid element
+          grid.hostElement.style.transform &#x3D; xform;
+      }, 2000); // animate for two seconds
+   }
+
     ngAfterViewInit() {
 
       this.flexGrid.isReadOnly &#x3D; true;
@@ -794,6 +884,9 @@ export class GroupingComponent implements AfterViewInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container-fluid&quot;&gt;
+  &lt;button class&#x3D;&quot;btn btn-default&quot; (click)&#x3D;&quot;animate(flexGrid)&quot;&gt;
+    Flip the Grid
+  &lt;/button&gt;
   &lt;wj-flex-grid #flexGrid
       [itemsSource]&#x3D;&quot;workers&quot;
       [autoGenerateColumns]&#x3D;false
@@ -818,7 +911,15 @@ export class GroupingComponent implements AfterViewInit {
                 <p class="comment">
                     <code>./grouping.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">/*
+                <pre class="line-numbers"><code class="language-scss">.wj-flexgrid {
+  max-height: 500px;
+  margin-bottom: 2in;
+}
+
+.container-fluid {
+  perspective: 1000px;
+}
+/*
 
 See: styles.css
 
@@ -865,8 +966,8 @@ body {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="container-fluid">  <wj-flex-grid #flexGrid      [itemsSource]="workers"      [autoGenerateColumns]=false      [headersVisibility]="\'Column\'"      [selectionMode]="\'Row\'"      [childItemsPath]="[\'checks\',\'earnings\']"      (loadedRows)="onLoadedRows(flexGrid,$event)"      (beginningEdit)="onBeginningEdit(flexGrid, $event)"  >    <wj-flex-grid-column [binding]="\'name\'" [isReadOnly]=false></wj-flex-grid-column>    <wj-flex-grid-column [binding]="\'hours\'" [isReadOnly]=false [dataType]="\'Number\'" [format]="\'n2\'"></wj-flex-grid-column>    <wj-flex-grid-column [binding]="\'rate\'" [dataType]="\'Number\'" [format]="\'n2\'"></wj-flex-grid-column>    <wj-flex-grid-column [binding]="\'uif\'" [dataType]="\'Number\'" [format]="\'n2\'"></wj-flex-grid-column>    <wj-flex-grid-column [binding]="\'paye\'" [dataType]="\'Number\'" [format]="\'n2\'"></wj-flex-grid-column>  </wj-flex-grid></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'GroupingComponent', 'selector': 'app-grouping'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'PaletteComponent', 'selector': 'app-palette'},{'name': 'PaletteComponent', 'selector': 'app-palette'},{'name': 'PlanningComponent', 'selector': 'app-planning'},{'name': 'RibbonComponent', 'selector': 'app-ribbon'},{'name': 'WorksheetComponent', 'selector': 'app-worksheet'}];
+        var COMPONENT_TEMPLATE = '<div><div class="container-fluid">  <button class="btn btn-default" (click)="animate(flexGrid)">    Flip the Grid  </button>  <wj-flex-grid #flexGrid      [itemsSource]="workers"      [autoGenerateColumns]=false      [headersVisibility]="\'Column\'"      [selectionMode]="\'Row\'"      [childItemsPath]="[\'checks\',\'earnings\']"      (loadedRows)="onLoadedRows(flexGrid,$event)"      (beginningEdit)="onBeginningEdit(flexGrid, $event)"  >    <wj-flex-grid-column [binding]="\'name\'" [isReadOnly]=false></wj-flex-grid-column>    <wj-flex-grid-column [binding]="\'hours\'" [isReadOnly]=false [dataType]="\'Number\'" [format]="\'n2\'"></wj-flex-grid-column>    <wj-flex-grid-column [binding]="\'rate\'" [dataType]="\'Number\'" [format]="\'n2\'"></wj-flex-grid-column>    <wj-flex-grid-column [binding]="\'uif\'" [dataType]="\'Number\'" [format]="\'n2\'"></wj-flex-grid-column>    <wj-flex-grid-column [binding]="\'paye\'" [dataType]="\'Number\'" [format]="\'n2\'"></wj-flex-grid-column>  </wj-flex-grid></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'GroupingComponent', 'selector': 'app-grouping'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'PaletteComponent', 'selector': 'app-palette'},{'name': 'PaletteComponent', 'selector': 'app-palette'},{'name': 'PivotpanelComponent', 'selector': 'app-pivotpanel'},{'name': 'PlanningComponent', 'selector': 'app-planning'},{'name': 'RibbonComponent', 'selector': 'app-ribbon'},{'name': 'WorksheetComponent', 'selector': 'app-worksheet'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'GroupingComponent'};
 </script>
