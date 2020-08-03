@@ -2,7 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import * as GC from '@grapecity/spread-sheets';
 import { ImageRowHeaderCellType, sampleImgBase64 } from './imageCellType';
 
-// GC.Spread.Sheets.LicenseKey = '<YOUR LICENSE HERE>';
+GC.Spread.Sheets.LicenseKey = 'PEREIRA,E724567677254722#B0zhBGM9FXVxlWWpdXezIXOr9ERFR4YFpUWoVnMQFlVQFUVQVXRVNnawBHVYNFNH5ENm96dpFXdMBjRLtmRYl7dxFHUL9ENy5mZwRzRsZWOspFZhd5NsZUQTdUROJ7Ki9GTvg7KsRTMndVYT3kYyklZDJFNGlXY4kFNKF5TDBHWFhnQndmTxIFbERFVvkneGV7KL9WeXtmdWpGZrJFUBNTYEJ4cwpnNmZGWWlmNOVkWLFzUhx6QlVmRTF4RNVTcXp5UrYVYtt6TvtSWwZmbmZFcDBnWhxUOJtEToVkVRNHdCFVWZNjbyUGMMZERiojITJCLiE4MDRTQDFjMiojIIJCL7MDO4QjN5YzN0IicfJye&Qf35VfiU5TzYjI0IyQiwiIzEjL6ByUKBCZhVmcwNlI0IiTis7W0ICZyBlIsIyMykDMxADIzADOwAjMwIjI0ICdyNkIsIiMwkDMwIDMyIiOiAHeFJCLiEkUJVkUFBlI0ISYONkIsUWdyRnOiwmdFJCLiIjM7QTNyczN6cjN5QjM7IiOiQWSiwSflNHbhZmOiI7ckJye0ICbuFkI1pjIEJCLi4TP7h5V0tkawdUYNNlN4UmUw24V684bix4VyA7NzpFSEBzKmFzQIJWS92EWxkDcBl7Nx5EcutyQvNkb4gXc7EHVCRjNCl5YhVkbO3iYUR6MrI7UpdDWIlGT8N5bQdDM4QHUxc4QSB5MBljnDBU';
 
 @Component({
   selector: 'app-planning',
