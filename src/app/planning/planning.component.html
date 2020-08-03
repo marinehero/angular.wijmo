@@ -7,6 +7,7 @@
     [hostStyle]="hostStyle"
     (workbookInitialized)="workbookInit($event)"
     >
+    <button (click)="printBtn($event)">Print</button>
     <gc-worksheet [name]="sheetName" [dataSource]="data" [rowOutlineInfo]="rowOutlineInfo">
       <gc-column dataField="name" headerText="Name" width=310></gc-column>
       <gc-column dataField="chapter" headerText="Chapter" width=150></gc-column>
@@ -14,6 +15,9 @@
       <gc-column dataField="ref" headerText="ref" width=150></gc-column>
     </gc-worksheet>
   </gc-spread-sheets>
+
+</div>
+<div>
 </div>
 
 <!--
