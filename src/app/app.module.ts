@@ -26,6 +26,10 @@ import { PlanningComponent } from './planning/planning.component';
 import { PlanningModule } from './planning/planning.module';
 import { PivotpanelComponent } from './pivotpanel/pivotpanel.component';
 import { PivotpanelModule } from './pivotpanel/pivotpanel.module';
+import { FirestoreComponent } from './firestore/firestore.component';
+import { FirestoreModule } from './firestore/firestore.module';
+import { GooglesheetComponent } from './googlesheet/googlesheet.component';
+import { GooglesheetModule } from './googlesheet/googlesheet.module';
 
 const routes: Routes = [
   // Basic routes
@@ -35,13 +39,14 @@ const routes: Routes = [
   { path: 'grouping', component: GroupingComponent },
   { path: 'planning', component: PlanningComponent },
   { path: 'palette', component: PaletteComponent },
-  { path: 'pivot', component: PivotpanelComponent }
+  { path: 'pivot', component: PivotpanelComponent },
+  { path: 'firestore', component: FirestoreComponent },
+  { path: 'googlesheet', component: GooglesheetComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent
-
   ],
   imports: [
     BrowserModule,
@@ -51,6 +56,8 @@ const routes: Routes = [
     GroupModule,
     PlanningModule,
     PivotpanelModule,
+    FirestoreModule,
+    GooglesheetModule,
     RouterModule.forRoot(routes)
   ],
   providers: [ { provide: LoggerService, useClass: ConsoleLoggerService } ],
