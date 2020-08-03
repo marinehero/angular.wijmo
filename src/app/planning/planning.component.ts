@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import * as GC from '@grapecity/spread-sheets';
+import { ImageRowHeaderCellType, sampleImgBase64 } from './imageCellType';
 
 // GC.Spread.Sheets.LicenseKey = '<YOUR LICENSE HERE>';
 
@@ -180,6 +181,35 @@ export class PlanningComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  workbookInit(args: any) {
+    const spread: GC.Spread.Sheets.Workbook = args.spread;
+    const sheet = spread.getActiveSheet();
+
+    sheet
+      .getCell(0, 0)
+      .text('Planning Preface')
+      .foreColor;
+
+    // add outlines
+    sheet.suspendPaint();
+    sheet.rowOutlines.group(1, 10);
+    sheet.rowOutlines.group(1, 4);
+    sheet.rowOutlines.group(6, 4);
+
+    sheet.columnOutlines.group(1, 3);
+    sheet.columnOutlines.group(1, 2);
+
+    this.setImageInRowHeader(sheet);
+
+    sheet.resumePaint();
+
+  }
+
+  setImageInRowHeader(sheet: any) {
+    const imageCellType = new ImageRowHeaderCellType(sampleImgBase64);
+    sheet.setCellType(0, 0, imageCellType, GC.Spread.Sheets.SheetArea.rowHeader);
   }
 
 }
