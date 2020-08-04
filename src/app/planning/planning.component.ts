@@ -160,6 +160,10 @@ export class PlanningComponent implements OnInit {
       }
     }
 
+    for (let idx = 0; idx < 100; idx++) {
+      commands.push({ name: '', chapter: '', page: 39 + idx, indent: null });
+    }
+
     // Set the data for Spread
     this.data = commands;
   }

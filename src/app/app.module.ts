@@ -30,6 +30,7 @@ import { FirestoreComponent } from './firestore/firestore.component';
 import { FirestoreModule } from './firestore/firestore.module';
 import { GooglesheetComponent } from './googlesheet/googlesheet.component';
 import { GooglesheetModule } from './googlesheet/googlesheet.module';
+import { NgxScrollTopModule } from 'ngx-scrolltop';
 
 const routes: Routes = [
   // Basic routes
@@ -58,7 +59,8 @@ const routes: Routes = [
     PivotpanelModule,
     FirestoreModule,
     GooglesheetModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    NgxScrollTopModule
   ],
   providers: [ { provide: LoggerService, useClass: ConsoleLoggerService } ],
   bootstrap: [ AppComponent ]

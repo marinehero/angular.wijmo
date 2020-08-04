@@ -7,9 +7,12 @@ import { WorksheetComponent } from './worksheet.component';
 
 import { CountryService } from '../services/country.service';
 
+import { NgxScrollTopModule } from 'ngx-scrolltop';
+
 @NgModule({
   imports: [
     CommonModule,
+    NgxScrollTopModule,
     WjGridSheetModule
   ],
   declarations: [ WorksheetComponent ],
