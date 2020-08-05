@@ -1,25 +1,23 @@
 <!-- ngx-scrolltop -->
-<ngx-scrolltop
-  [size]="50"
-  backgroundColor="#33691e"
-  symbolColor="#fff"
-  mode="classic"
-  position="left"
-  theme="pink"
->
-  ↑
-</ngx-scrolltop>
+<!-- <ngx-scrolltop [size]="50" backgroundColor="#33691e" symbolColor="#fff" mode="classic" position="left" theme="pink">
+    ↑
+</ngx-scrolltop> -->
+
+<a class="float" (click)="flexSheet.scrollIntoView(0, -1)" [style.display]="flexSheet.scrollPosition.y === -0 ? 'none' : 'block'">
+  <i class="fa fa-arrow-up float-icon"></i>
+</a>
 
 <wj-flex-sheet #flexSheet>
   <wj-sheet name="Profit & Loss"></wj-sheet>
 </wj-flex-sheet>
 
+<!-- <span ngxScrollTop>↑</span> -->
 <!--
 
 <wj-flex-sheet #flexSheet (initialized)="flexSheetInit(flexSheet)">
-  <wj-sheet name="Country"></wj-sheet>
-  <wj-sheet name="Report"></wj-sheet>
-  <wj-sheet name="Formulas"></wj-sheet>
+<wj-sheet name="Country"></wj-sheet>
+<wj-sheet name="Report"></wj-sheet>
+<wj-sheet name="Formulas"></wj-sheet>
 </wj-flex-sheet>
 
 -->
