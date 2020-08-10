@@ -9,19 +9,19 @@ export function getColumnGroups(): any[] {
   return [
       { binding: 'name', header: 'Name', width: 150 },
       { binding: 'currency', header: 'Curr', width: 80, align: 'center' },
-      { header: 'Perf', align: 'center', collapseTo: 'perf.ytd', columns: [
-          { binding: 'perf.ytd', header: 'YTD', format: 'p2', width: 100, cssClass: 'main-column' },
-          { binding: 'perf.m1', header: '1 M', format: 'p2', width: 80 },
-          { binding: 'perf.m6', header: '6 M', format: 'p2', width: 80 },
-          { binding: 'perf.m12', header: '12 M', format: 'p2', width: 80 },
-      ]},
       { header: 'Allocation', align: 'center', collapseTo: 'alloc.amount', columns: [
-          { binding: 'alloc.stock', header: 'Stocks', format: 'p0', width: 80, cellTemplate: allocTemplate },
-          { binding: 'alloc.bond', header: 'Bonds', format: 'p0', width: 80, cellTemplate: allocTemplate },
-          { binding: 'alloc.cash', header: 'Cash', format: 'p0', width: 80, cellTemplate: allocTemplate },
-          { binding: 'alloc.other', header: 'Other', format: 'p0', width: 80, cellTemplate: allocTemplate },
-          { binding: 'alloc.amount', header: 'Amount', format: 'c0', width: 100, cssClass: 'main-column', cellTemplate: amountTemplate }
-      ]}
+        { binding: 'alloc.stock', header: 'Stocks', format: 'p0', width: 80, cellTemplate: allocTemplate },
+        { binding: 'alloc.bond', header: 'Bonds', format: 'p0', width: 80, cellTemplate: allocTemplate },
+        { binding: 'alloc.cash', header: 'Cash', format: 'p0', width: 80, cellTemplate: allocTemplate },
+        { binding: 'alloc.other', header: 'Other', format: 'p0', width: 80, cellTemplate: allocTemplate },
+        { binding: 'alloc.amount', header: 'Amount', format: 'c0', width: 100, cssClass: 'main-column', cellTemplate: amountTemplate }
+      ]},
+      { header: 'Perf', align: 'center', collapseTo: 'perf.ytd', columns: [
+            { binding: 'perf.ytd', header: 'YTD', format: 'p2', width: 100, cssClass: 'main-column' },
+            { binding: 'perf.m1', header: '1 M', format: 'p2', width: 80 },
+            { binding: 'perf.m6', header: '6 M', format: 'p2', width: 80 },
+            { binding: 'perf.m12', header: '12 M', format: 'p2', width: 80 },
+        ]}
   ];
 }
 

@@ -1,26 +1,26 @@
-label {
+::ng-deep label {
   display: block;
 }
-.wj-flexgrid {
+::ng-deep .wj-flexgrid {
   margin: 10px 0;
 }
 
 /* highlight the main column in the group */
-.wj-flexgrid .wj-cells .wj-cell.main-column {
-  background: #e3f4ff;
+::ng-deep .wj-flexgrid .wj-cells .wj-cell.main-column {
+  background: #fdf1e9;
 }
 
 /* some conditional formatting */
-.big-val {
+::ng-deep .big-val {
   font-weight: bold;
   color: darkgreen;
 }
-.small-val {
+::ng-deep .small-val {
   font-style: italic;
   color: rgb(202, 0, 0);
 }
 
 /* some animation when collapsing/expanding the groups */
-.wj-flexgrid.animated .wj-colheaders .wj-header.wj-cell.wj-colgroup {
+::ng-deep .wj-flexgrid.animated .wj-colheaders .wj-header.wj-cell.wj-colgroup {
   transition: all .2s;
 }
