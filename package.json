@@ -31,7 +31,7 @@
     "@grapecity/wijmo.cloud": "^5.20202.699",
     "@grapecity/wijmo.olap": "~5.20202.699",
     "core-js": "^3.6.5",
-    "jszip": "^3.5.0",
+    "jszip": "^3.8.0",
     "ngx-scrolltop": "^2.0.0",
     "rxjs-compat": "^6.6.0"
   },
